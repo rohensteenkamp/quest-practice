@@ -16,7 +16,9 @@ export class PlanetService {
     return this.planets;
   }
 
-  // addPlanet() {
-
-  // }
+  addPlanet(planet: Planet) {
+    if(planet.name && planet.description) {
+      this.planets.push(planet);
+    }
+  }
 }

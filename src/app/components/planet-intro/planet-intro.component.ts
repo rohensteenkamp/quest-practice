@@ -14,9 +14,9 @@ export class PlanetIntroComponent implements OnInit {
 
   constructor(private planetService: PlanetService) { }
 
-  // addPlanet(): void {
-    
-  // }
+  addPlanet(): void {
+    this.planetService.addPlanet(this.newPlanet);
+  }
 
   ngOnInit() {
     this.planets = this.planetService.getPlanets();
