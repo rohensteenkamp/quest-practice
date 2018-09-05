@@ -2,13 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { RoutingModule } from './routing.module';
+
+import { FormsModule } from '@angular/forms';
+import { PlanetIntroComponent } from './components/planet-intro/planet-intro.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlanetIntroComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

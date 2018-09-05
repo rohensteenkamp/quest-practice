@@ -1,0 +1,9 @@
+<h1>Create Planet</h1>>
+<input [(ngModel)] = "newPlanet.name" type="text" placeholder="new Planet...">
+<input [(ngModel)] = "newPlanet.description" type="text" placeholder="describe it here...">
+<button type="button" (click)="addPlanet()">Create</button>
+
+<h1>List of Planets</h1>
+<ul>
+  <li *ngFor="let planet of planets"><b>{{planet.name}}:</b>{{planet.description}}</li>
+</ul>
