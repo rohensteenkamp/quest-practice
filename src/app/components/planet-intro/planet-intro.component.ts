@@ -18,6 +18,10 @@ export class PlanetIntroComponent implements OnInit {
     this.planetService.addPlanet(this.newPlanet);
   }
 
+  removePlanet(delPlanet): void {
+    this.planetService.removePlanet(delPlanet);
+  }
+
   ngOnInit() {
     this.planets = this.planetService.getPlanets();
   }

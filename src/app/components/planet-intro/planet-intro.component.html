@@ -5,5 +5,5 @@
 
 <h1>List of Planets</h1>
 <ul>
-  <li *ngFor="let planet of planets"><b>{{planet.name}}:</b>{{planet.description}}<button class="ml-3" type="button">x</button></li>
+  <li *ngFor="let planet of planets"><b>{{planet.name}}:</b>{{planet.description}}<button class="ml-3" type="button" (click)="removePlanet(planet)">x</button></li>
 </ul>
