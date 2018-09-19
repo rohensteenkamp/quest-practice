@@ -21,4 +21,16 @@ export class Planet2Component implements OnInit {
     this.planet2Service.addPlanet(this.newPlanet);
     this.newPlanet = {} as Planet;
   }
+
+  removePlanet(planetToDelete: Planet): void {
+    this.planet2Service.removePlanet(planetToDelete);
+  }
+
+  editPlanet(): void {
+
+  }
+
+  selectPlanet(): void {
+
+  }
 }

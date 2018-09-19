@@ -1,12 +1,23 @@
-<div>
+<div class="container">
 
+<div>
 <h1>List of planets</h1>
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let planet of planets">
+  <li class="list-group-item list-group-item-active" *ngFor="let planet of planets">
     <b>{{planet.name}}</b>
     <br>
     <p>{{planet.description}}</p>
+     <button type="button" class="btn btn-outline-danger btn-pill" (click)="removePlanet(planet)">X</button>
+     <button type="button" class="btn btn-outline-primary btn-pill" (click)="editPlanet()">Edit</button>
   </li>
 </ul>
+</div>
+
+<div>
+  <h1>Create Planet</h1>
+    <input class="form-control" [(ngModel)]="newPlanet.name" type="text" placeholder="Planet name...">
+    <input class="form-control" [(ngModel)]="newPlanet.description" type="text" placeholder="Planet descriptions...">
+      <button type="button" class="btn btn-success btn-pill" (click)="addPlanet(newPlanet)">Create</button>
+</div>
 
 </div>
