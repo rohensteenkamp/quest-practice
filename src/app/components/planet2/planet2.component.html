@@ -7,7 +7,7 @@
     <b>{{planet.name}}</b>
     <br>
     <p>{{planet.description}}</p>
-     <button type="button" class="btn btn-outline-danger btn-pill" (click)="removePlanet(planet)">X</button>
+     <button type="button" class="btn btn-outline-danger btn-pill" (click)="openModal(true) ;selectPlanet(planet)">X</button>
      <button type="button" class="btn btn-outline-primary btn-pill" (click)="editPlanet()">Edit</button>
   </li>
 </ul>

@@ -10,6 +10,7 @@ import { Planet } from '../../models/planet';
 export class Planet2Component implements OnInit {
   planets: Planet[];
   newPlanet: Planet = {} as Planet;
+  selectedPlanet: Planet = {} as Planet;
 
   constructor(private planet2Service: Planet2Service) { }
 
@@ -24,13 +25,18 @@ export class Planet2Component implements OnInit {
 
   removePlanet(planetToDelete: Planet): void {
     this.planet2Service.removePlanet(planetToDelete);
+    this.selectedPlanet = {} as Planet;
   }
 
   editPlanet(): void {
 
   }
 
-  selectPlanet(): void {
+  selectPlanet(planetToEdit: Planet): void {
+    this.selectedPlanet = {} as Planet
+  }
 
+  openModal(open:boolean): void {
+    
   }
 }
